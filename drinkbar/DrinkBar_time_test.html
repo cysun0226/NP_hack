@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="gr__getbootstrap_com" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title -->
+    <title>手搖 Bar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="DrinkBar.css">
+    <link href="jquery-ui-timepicker-addon.css" rel="stylesheet"></link>
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/hot-sneaks/jquery-ui.css" rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+	<!-- SCRIPT -->
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+  	 <!-- local js -->
+  	<script type="text/javascript" src="jquery-ui-timepicker-addon.js"></script>
+  	<script type='text/javascript' src='jquery-ui-sliderAccess.js'></script>
+  
+    <script src="Tab.js" language="JavaScript"></script>
+    <script src="jump.js" language="JavaScript"></script>
+    
+    <script>
+    $(function() {
+        $("#datepicker").datepicker();
+    });
+
+    $(document).ready(function(){ 
+      $('#t_cut').datetimepicker();
+      });
+
+    $(document).ready(function(){ 
+      $('#t_arr').datetimepicker();
+      });
+
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/i18n/jquery-ui-timepicker-addon-i18n.js" language="JavaScript"></script> -->
+    
+    
+</head>
+
+<body>
+    <header style="display: block;">
+        <h1>手搖 Bar</h1>
+    </header>
+    <!-- navigator -->
+    <nav class="nav_bar">
+        <ul>
+            <li><a href="PlurkCss.html"> 開團 </a></li>
+            <li><a href="PlurkCss.html"> 帳號管理 </a></li>
+            <!-- href="homeworklist.html" -->
+            <!-- <li><a href="PlurkCss_AboutMe.html"> 作者介紹 </a></li> -->
+            <li style="float:right; background-color: #f9d572;"><a href=""> 登入 </a>
+                <!-- <a class="active" href="PlurkCss_about.html">關於本站</a> --></li>
+        </ul>
+    </nav>
+    
+    <!-- menu & demo -->
+    <table>
+        <tr>
+            <td id="tabs_bar">
+                <div id="sidebar_title">選單</div>
+                <ul id="tabs" class="fix">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">開團管理</a></li>
+                    <li><a href="#">跟團確認</a></li>
+                    <li><a href="#">++</a></li>
+                    <li><a href="#">new</a></li>
+                </ul>
+            </td>
+            <td>
+                <div id="container">
+                    <div class="content">
+                        <!-- __________ main page __________ -->
+                        <div class="tab">
+                            <h2>目前的團</h2>
+                            <div style="background: black; width=100%;">
+
+                            <div class="act col-md-3 col-sm-6 col-xs-12" style="background: blue; margin: 10px;">
+                            <br><br><br>
+                            </div>
+
+                            <div class="act col-md-3 col-sm-6 col-xs-12" style="background: blue; margin: 10px;">
+                            <br><br><br>
+                            </div>
+
+                            <div class="act col-md-3 col-sm-6 col-xs-12" style="background: blue; margin: 10px;">
+                            <br><br><br>
+                            </div>
+
+
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                            	
+                            </div>
+
+                            <br>
+
+                            <h2>已收團</h2>
+                            <br>
+                            <br>
+                            <!-- <button onclick="output_background_code()"></button> -->
+                            <br>
+                            <br>
+                        </div>
+                        <!-- __________ host __________  -->
+                        <div class="tab">
+                            <h2>開團管理</h2>
+                            <!-- dashboard -->
+                            <h3>　跟團名單  </h3>
+                            <!-- dashboard_color -->
+                            <button onclick="output_dashboard_code()">完成</button>
+                        </div>
+                        <!-- __________ confirm __________ -->
+                        <div class="tab">
+                            <h2>訂單確認</h2>
+                            <h3>我的飲料</h3>
+                            <br>
+                            <button onclick="output_profile_code()">編輯</button>
+                            <br>
+                            <br>
+                        </div>
+                        <!-- ++ -->
+                        <div class="tab">
+                            <div id="dialog-form" title="跟團++">
+                                <p class="validateTips">All form fields are required.</p>
+                                <img src="http://www.i-write.idv.tw/life/info/picture/50lan/50lan-menu.jpg" alt="">
+                                <form>
+                                        我想喝:
+                                        <input type="text"> <br>
+                                         糖度
+                                        <select id="background_font_size">
+                                            <option value="8" selected="">8</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18" selected="">18</option>
+                                            <option value="20" selected="">20</option>
+                                            <option value="22">22</option>
+                                            <option value="24">24</option>
+                                        </select>
+                                        冰塊
+                                        <select id="background_font_size">
+                                            <option value="8" selected="">8</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18" selected="">18</option>
+                                            <option value="20" selected="">20</option>
+                                            <option value="22">22</option>
+                                            <option value="24">24</option>
+                                        </select> <br>
+                                        價錢
+                                        <input type="text">
+                                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                </form>
+                            </div>
+                            <div id="users-contain" class="ui-widget">
+                                <h2>本團資訊</h2> zzzzzz
+                            </div>
+                            <button id="create-user">++</button>
+                        </div>
+                        <!-- new -->
+                        <div class="tab">
+
+                        <h2>開團</h2>
+                        <br><br>
+                            <img src="http://www.i-write.idv.tw/life/info/picture/50lan/50lan-menu.jpg" alt="">
+                                <form>
+                                        <label for="name">店家</label>
+                                        
+                                        <select id="shop">
+                                            <option value="0" selected="">50嵐</option>
+                                            <option value="1">迷克夏</option>
+                                            <option value="2">大苑子</option>
+                                        </select>
+                                        <br> 
+
+                                        截止日期
+                                        <input id="t_cut" type="text" /> <br>
+                                        
+                                        預計送達時間
+                                        <input id="t_arr" type="text" /> <br>
+                                        
+                                        <label for="password">目標人數</label>
+                                        <input type="password" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+                                        <br>
+                                        
+                                        地點
+                                        <input type="text">
+                                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                   
+                                </form>
+                            <button id="create-user">開團</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <!-- <td id="blank">            </td> -->
+        </tr>
+    </table>
+    <!-- menu(tab) -->
+    <!-- footer -->
+</body>
+
+</html>

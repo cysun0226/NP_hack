@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="gr__getbootstrap_com" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title -->
+    <title>手搖 Bar</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="DrinkBar.css">
+    <link rel="stylesheet" href="timepickerCss.css">
+    <link href="css/siena.datepicker.css" rel="stylesheet">
+	<link href="css/santiago.datepicker.css" rel="stylesheet">
+	<link href="css/latoja.datepicker.css" rel="stylesheet">
+	<link href="css/lugo.datepicker.css" rel="stylesheet">
+	<link href="css/cangas.datepicker.css" rel="stylesheet">
+	<link href="css/vigo.datepicker.css" rel="stylesheet">
+	<link href="css/nigran.datepicker.css" rel="stylesheet">
+
+<!-- timepicker -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="jquery.timepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="jquery.timepicker.css" />
+
+  <script type="text/javascript" src="lib/bootstrap-datepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap-datepicker.css" />
+
+  <script type="text/javascript" src="lib/site.js"></script>
+  <!-- <link rel="stylesheet" type="text/css" href="lib/site.css" /> -->
+
+    <!-- script -->
+    <!-- <script src="http://code.jquery.com/jquery-1.8.3.min.js" language="JavaScript"></script> -->
+    <script type="text/javascript" src="jquery.js"></script>
+    <script src="Tab.js" language="JavaScript"></script>
+    <script src="jump.js" language="JavaScript"></script>
+    <!-- <script src="timepicker.js" language="JavaScript"></script> -->
+    <!-- <script src="jquery-ui.js" language="JavaScript"></script> -->
+    
+    <!-- <script src="DrinkBar.js" language="JavaScript"></script> -->
+      
+      <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+
+  $(function() {
+			$( "#date-picker-input-1" ).datepicker({
+				inline: true,
+				showOtherMonths: true
+			})
+			.datepicker('widget').wrap('<div class="ll-skin-santiago"/>');
+		});
+    
+    </script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/i18n/jquery-ui-timepicker-addon-i18n.js" language="JavaScript"></script> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+    label,
+    input {
+        display: block;
+    }
+    
+    input.text {
+        margin-bottom: 12px;
+        width: 95%;
+        padding: .4em;
+    }
+    
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin-top: 25px;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+        margin: .6em 0;
+    }
+    
+    div#users-contain {
+        width: 350px;
+        margin: 20px 0;
+    }
+    
+    div#users-contain table {
+        margin: 1em 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    div#users-contain table td,
+    div#users-contain table th {
+        border: 1px solid #eee;
+        padding: .6em 10px;
+        text-align: left;
+    }
+    
+    .ui-dialog .ui-state-error {
+        padding: .3em;
+    }
+    
+    .validateTips {
+        border: 1px solid transparent;
+        padding: 0.3em;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <header style="display: block;">
+        <h1>手搖 Bar</h1>
+    </header>
+    <!-- navigator -->
+    <nav class="nav_bar">
+        <ul>
+            <li><a href="PlurkCss.html"> 帳號管理 </a></li>
+            <!-- href="homeworklist.html" -->
+            <!-- <li><a href="PlurkCss_AboutMe.html"> 作者介紹 </a></li> -->
+            <li style="float:right; background-color: #f9d572;"><a href="http://people.cs.nctu.edu.tw/~cysun0226/"> 登入 </a>
+                <!-- <a class="active" href="PlurkCss_about.html">關於本站</a> --></li>
+        </ul>
+    </nav>
+    <!-- <form name="formName" id="formId" method="post" action="someURL" target=_blank>
+        你的河道網址：
+        <input type="text" name="userAddress"  value="" >
+        <input type=submit value="送出"> <input type=reset value="清除">
+    </form> -->
+    <!-- menu & demo -->
+    <table>
+        <tr>
+            <td id="tabs_bar">
+                <div id="sidebar_title">選單</div>
+                <ul id="tabs" class="fix">
+                    <li><a href="#">首頁</a></li>
+                    <li><a href="#">開團管理</a></li>
+                    <li><a href="#">跟團確認</a></li>
+                    <li><a href="#">++</a></li>
+                    <li><a href="#">new</a></li>
+                </ul>
+            </td>
+            <td>
+                <div id="container">
+                    <div class="content">
+                        <!-- __________ main page __________ -->
+                        <div class="tab">
+                            <h2>目前的團</h2>
+                            <h2>已收團</h2>
+                            <br>
+                            <br>
+                            <!-- <button onclick="output_background_code()"></button> -->
+                            <br>
+                            <br>
+                        </div>
+                        <!-- __________ host __________  -->
+                        <div class="tab">
+                            <h2>開團管理</h2>
+                            <!-- dashboard -->
+                            <h3>　跟團名單  </h3>
+                            <!-- dashboard_color -->
+                            <button onclick="output_dashboard_code()">完成</button>
+                        </div>
+                        <!-- __________ confirm __________ -->
+                        <div class="tab">
+                            <h2>訂單確認</h2>
+                            <h3>我的飲料</h3>
+                            <br>
+                            <button onclick="output_profile_code()">編輯</button>
+                            <br>
+                            <br>
+                        </div>
+                        <!-- ++ -->
+                        <div class="tab">
+                            <div id="dialog-form" title="跟團++">
+                                <p class="validateTips">All form fields are required.</p>
+                                <img src="http://www.i-write.idv.tw/life/info/picture/50lan/50lan-menu.jpg" alt="">
+                                <form>
+                                    <fieldset>
+                                        <label for="name">我想喝: </label>
+                                        <input type="text" name="name" id="name" value=" " class="text ui-widget-content ui-corner-all"> 糖度
+                                        <select id="background_font_size">
+                                            <option value="8" selected="">8</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18" selected="">18</option>
+                                            <option value="20" selected="">20</option>
+                                            <option value="22">22</option>
+                                            <option value="24">24</option>
+                                        </select>
+                                        冰塊
+                                        <select id="background_font_size">
+                                            <option value="8" selected="">8</option>
+                                            <option value="12">12</option>
+                                            <option value="14">14</option>
+                                            <option value="16">16</option>
+                                            <option value="18" selected="">18</option>
+                                            <option value="20" selected="">20</option>
+                                            <option value="22">22</option>
+                                            <option value="24">24</option>
+                                        </select>
+                                        <label for="password">價錢</label>
+                                        <input type="password" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+                                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div id="users-contain" class="ui-widget">
+                                <h2>本團資訊</h2> zzzzzz
+                            </div>
+                            <button id="create-user">Create new user</button>
+                        </div>
+                        <!-- new -->
+                        <div class="tab">
+                            <div id="dialog-form" title="跟團++">
+                                <p class="validateTips">All form fields are required.</p>
+                                <img src="http://www.i-write.idv.tw/life/info/picture/50lan/50lan-menu.jpg" alt="">
+                                <form>
+                                    <fieldset>
+                                        <label for="name">店家</label>
+                                        <select id="shop">
+                                            <option value="0" selected="">50嵐</option>
+                                            <option value="1">迷克夏</option>
+                                            <option value="2">大苑子</option>
+                                        </select><br>
+                                        截止日期
+                                        <input type="text" id="datepicker">
+                                        截止時間
+
+                                        預計送達時間
+                                        <input type="text" id="date-picker-input-1" />
+
+                                        <label for="password">目標人數</label>
+                                        <input type="password" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+                                        <label for="password">地點</label>
+                                        <input type="password" name="password" id="password" value="0" class="text ui-widget-content ui-corner-all">
+                                        <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                                        <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div id="users-contain" class="ui-widget">
+                                <h2>本團資訊</h2> zzzzzz
+                            </div>
+                            <button id="create-user">Create new user</button>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <!-- <td id="blank">            </td> -->
+        </tr>
+    </table>
+    <!-- menu(tab) -->
+    <!-- footer -->
+</body>
+
+</html>
